@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: sans-serif;
+}
+
+body{
+    background-color: rgba(35, 35, 35, 0.85);
+}
+
+.container{
+    margin: 2em auto;
+    width: 100%;
+    width: 40%;
+}
+
+header{
+    background-color: rgba(0, 0, 0, 0.784);
+    color: rgb(231, 219, 255);
+    text-align: center;
+    padding: 1em;
+    margin: 1em 0;
+}
+
+
+.top-image div{
+    width: 100%;
+    height: fit-content;
+    /* border: 1px solid red; */
+}
+
+img{
+    width: 100%;
+} 
+
+.bottom-container figure{
+    width: calc(100% / 5);
+    aspect-ratio: 1;
+}
+
+
+.bottom-container{
+    display: flex;
+    /* position: relative; */
+    opacity: 0.75;
+}
+
+.top-image div figure{
+    position: relative;
+}
+
+.description{
+    position: absolute;
+    top: 0em;
+    padding: 0.7em;
+    /* font-size: 0.8em; */
+    text-align: end;
+    color: white;
+    box-shadow: black;
+    background-color: rgba(0, 0, 0, 0.435);
+
+}
+
+.right-arrow{
+    position: absolute;
+    top: 64%; 
+    transform: translate(0, -50%);
+    right: 0;
+    fill: white;
+    width: 1.5em;
+    margin-right: 18em;
+    z-index: 999;
+    
+}
+
+.left-arrow{
+    position: absolute;
+    top: 64%; 
+    transform: translate(0, -50%);
+    left: 0;
+    fill: white;
+    width: 1.5em;
+    margin-left: 18em;
+    z-index: 999;
+}
+
+.smaller-text{
+    font-size: 0.5em;
+}
+
+.bigger-text{
+    font-size: 0.8em;
+    margin-bottom: 0.5em;
+}
