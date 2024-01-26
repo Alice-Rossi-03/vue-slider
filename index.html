@@ -17,7 +17,7 @@
     <main>
 
         <!-- main container -->
-        <div class="container" id="main-container" @mouseover="stopInterval" @mouseleave="scrollInterval">
+        <div class="container" id="main-container" @mouseover="stopScroll" @mouseleave="activeScroll">
 
             <!-- top current song -->
             <div class="top-image">
@@ -33,11 +33,10 @@
             </div> 
 
 
-            <!-- FIXME -->
             <!-- bottom thumbnails -->
             <div id="bottom-container" class="bottom-container">
                 <figure v-for="(song, index) in songArray" :key="index">
-                    <img :src="song.img">
+                    <img v-bind:src="song.img" @click="setSong(index)" v-bind:class="(currentSong === index) ? 'active' : '' ">
                 </figure>
             </div>
 

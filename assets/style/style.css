@@ -96,3 +96,7 @@ img{
     font-size: 0.8em;
     margin-bottom: 0.5em;
 }
+
+.active{
+    border: 2px solid lightskyblue;
+}
