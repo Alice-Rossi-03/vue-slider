@@ -17,7 +17,7 @@
     <main>
 
         <!-- main container -->
-        <div class="container" id="main-container">
+        <div class="container" id="main-container" @mouseover="stopInterval" @mouseleave="scrollInterval">
 
             <!-- top current song -->
             <div class="top-image">
@@ -36,11 +36,8 @@
             <!-- FIXME -->
             <!-- bottom thumbnails -->
             <div id="bottom-container" class="bottom-container">
-                <figure>
-                    <img 
-                    v-for=""
-                    alt=""
-                    v-bind:src="">
+                <figure v-for="(song, index) in songArray" :key="index">
+                    <img :src="song.img">
                 </figure>
             </div>
 
@@ -63,6 +60,6 @@
     <script src="https://unpkg.com/vue@3"></script>
 
     <!-- link to script-js -->
-    <script type="text/javascript" src="./main.js"></script>
+    <script type="text/javascript" src="./assets/script/main.js"></script>
 </body>
 </html>
